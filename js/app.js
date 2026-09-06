@@ -180,8 +180,20 @@
 
   function updateParallax() {
     parallaxTicking = false;
+
+    if (window.innerWidth <= 768) {
+      parallaxEls.forEach(function (el) {
+        el.style.transform = '';
+      });
+      return;
+    }
+
     var vh = window.innerHeight;
     parallaxEls.forEach(function (el) {
+        if (el.closest('.clx-frame, .clx-hero-frame')) {
+            el.style.transform = '';
+        return;
+  }
       var r = el.getBoundingClientRect();
       if (r.bottom < -80 || r.top > vh + 80) return;
       var speed = parseFloat(el.dataset.parallax) || 0.08;
