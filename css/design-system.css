@@ -818,7 +818,7 @@ body { background-color: var(--color-bg); color: var(--color-text); font-family:
 /* --- 19.2 Editorial media frame (shared) -------------------------------- */
 .clx-frame {
   position: relative; overflow: hidden; border: 1px solid var(--color-border-strong);
-  border-radius: 2px; background: red;
+  border-radius: 2px; background: var(--color-primary-dark);
 }
 .clx-frame img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .clx-frame--16x10 { aspect-ratio: 16 / 10; }
