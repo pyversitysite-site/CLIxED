@@ -118,6 +118,49 @@
     closeDropdowns();
   });
 
+  /* ---- Team dropdown: open on hover (desktop only) ---- */
+  document.querySelectorAll('.clx-nav-more').forEach(function (dd) {
+    var closeTimer = null;
+    function navDesktop() { return window.innerWidth > 1024; }
+    dd.addEventListener('mouseenter', function () {
+      if (!navDesktop()) return;
+      clearTimeout(closeTimer);
+      dd.setAttribute('open', '');
+    });
+    dd.addEventListener('mouseleave', function () {
+      if (!navDesktop()) return;
+      clearTimeout(closeTimer);
+      closeTimer = setTimeout(function () { dd.removeAttribute('open'); }, 150);
+    });
+
+    /* Mobile: reliable tap-to-toggle. Native <details> disclosure can be
+       flaky inside the fixed drawer, so drive the open state directly.
+       A debounce absorbs duplicate/synthetic click echo (some mobile
+       browsers fire two clicks per tap), which otherwise flashes the
+       sub-menu open then closed. */
+    var summary = dd.querySelector('summary');
+    if (summary) {
+      var lastToggleAt = 0;
+      summary.addEventListener('click', function (e) {
+        if (navDesktop()) return;
+        e.preventDefault();
+        var now = Date.now();
+        /* Ignore an echoed click from the same physical tap in either state. */
+        if (now - lastToggleAt < 500) return;
+        lastToggleAt = now;
+        if (dd.hasAttribute('open')) {
+          dd.removeAttribute('open');
+        } else {
+          document.querySelectorAll('.clx-nav-more[open]').forEach(function (o) {
+            if (o !== dd) o.removeAttribute('open');
+          });
+          dd.setAttribute('open', '');
+        }
+        summary.setAttribute('aria-expanded', dd.hasAttribute('open'));
+      });
+    }
+  });
+
   /* ---- Scrollspy (single-page anchors only) ---- */
   var spySections = document.querySelectorAll('main section[id]');
   var spyLinks = Array.prototype.filter.call(document.querySelectorAll('.nav-link'), function (l) {

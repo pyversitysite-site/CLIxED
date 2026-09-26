@@ -6,9 +6,9 @@
 
 :root {
   --blue-900: #081A38;
-  --blue-800: #0D2A50;
-  --blue-700: #123B6A;
-  --blue-600: #1B4690;
+  --blue-800: #092342;
+  --blue-700: #0D3158;
+  --blue-600: #123A78;
   --blue-500: #2E5DA8;
   --blue-400: #7C93B8;
   --blue-100: #E5EBF5;
@@ -16,8 +16,8 @@
   --accent: #C6A25C;
   --accent-dark: #A5854B;
   --accent-soft: #F4ECDD;
-  --ink: #23272F;
-  --slate: #5D6570;
+  --ink: #111820;
+  --slate: #394656;
   --line: #E6E7EB;
   --line-strong: #D5D8DE;
   --white: #FFFFFF;
@@ -33,9 +33,9 @@
 
 ::selection { background: var(--accent); color: var(--blue-900); }
 
-::-webkit-scrollbar-track { background: var(--blue-50); }
-::-webkit-scrollbar-thumb { background: var(--blue-400); border: 3px solid var(--blue-50); }
-::-webkit-scrollbar-thumb:hover { background: var(--blue-500); }
+::-webkit-scrollbar-track { background: #E9EFED; }
+::-webkit-scrollbar-thumb { background: #0B3A35; border: 3px solid #E9EFED; }
+::-webkit-scrollbar-thumb:hover { background: #062A26; }
 
 h1, h2, h3, h4 { color: var(--blue-900); }
 
@@ -1084,8 +1084,8 @@ h1, h2, h3, h4 { color: var(--blue-900); }
 .footer-contact-line a { transition: color 0.2s; }
 .footer-contact-line a:hover { color: var(--accent); }
 
-.to-top { background: var(--blue-800); }
-.to-top:hover { background: var(--blue-900); }
+.to-top { background: #0B3A35; }
+.to-top:hover { background: #062A26; }
 
 /* ============ RESPONSIVE — CLIxED LAYER ============ */
 

@@ -4,8 +4,8 @@
   <script>document.documentElement.classList.add('js')</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prof. Padma Sarangapani â€” Chief Mentor â€” CLIxED</title>
-  <meta name="description" content="Prof. Padma Sarangapani, Chief Mentor of CLIxED Foundation. Dean - Indira Mahindra School of Education, Mahindra University, Hyderabad.">
+  <title>Prof. Mythili Ramchand - Chief, Equity &amp; Inclusion - CLIxED</title>
+  <meta name="description" content="Prof. Mythili Ramchand, Chief of Equity &amp; Inclusion at CLIxED and Adjunct Professor at NIAS Bengaluru.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -29,104 +29,102 @@
     }
     .clx-profile-photo {
       position: relative;
-      aspect-ratio: 3 / 4;
+      border-radius: var(--radius-lg);
       overflow: hidden;
-      border-radius: 2px;
-      background: var(--color-primary-dark);
+      aspect-ratio: 3/4;
+      background: var(--color-surface-alt);
     }
     .clx-profile-photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: top center;
+      display: block;
     }
     .clx-profile-info {
-      display: grid;
+      display: flex;
+      flex-direction: column;
       gap: var(--space-4);
     }
     .clx-profile-role {
-      font-family: var(--font-display);
-      font-size: var(--type-label);
-      letter-spacing: 0.16em;
+      font-family: var(--font-body);
+      font-size: var(--size-sm);
+      font-weight: 700;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--color-accent);
       margin: 0;
     }
     .clx-profile-name {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 400;
-      line-height: 1.1;
-      margin: 0;
+      font-family: var(--font-heading);
+      font-size: var(--size-3xl);
+      font-weight: 700;
       color: var(--color-text);
+      margin: 0;
+      line-height: 1.15;
     }
     .clx-profile-title {
-      font-size: var(--type-body);
-      color: var(--color-accent);
-      line-height: 1.5;
+      font-size: var(--size-base);
+      color: var(--color-text-muted);
       margin: 0;
-    }
-    .clx-profile-prev-title {
-      font-size: var(--type-small);
-      color: var(--color-muted);
-      line-height: 1.5;
-      margin: 0;
-      font-style: italic;
+      line-height: 1.6;
     }
     .clx-profile-bio {
-      display: grid;
-      gap: var(--space-4);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
       margin-top: var(--space-4);
     }
     .clx-profile-bio p {
-      font-size: var(--type-body);
+      margin: 0;
       line-height: 1.7;
       color: var(--color-text);
-      margin: 0;
     }
     .clx-profile-highlights {
       display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: var(--space-4);
       margin-top: var(--space-6);
       padding-top: var(--space-6);
-      border-top: var(--border-thin);
-    }
-    .clx-profile-highlight {
-      display: grid;
-      gap: var(--space-2);
+      border-top: 1px solid var(--color-border);
     }
     .clx-profile-highlight-title {
-      font-family: var(--font-display);
-      font-size: var(--type-body);
-      font-weight: 600;
-      color: var(--color-text);
-      margin: 0;
+      font-family: var(--font-body);
+      font-size: var(--size-xs);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin: 0 0 var(--space-1);
     }
     .clx-profile-highlight-text {
-      font-size: var(--type-small);
-      color: var(--color-muted);
-      line-height: 1.6;
+      font-size: var(--size-sm);
+      color: var(--color-text-muted);
       margin: 0;
+      line-height: 1.6;
     }
     .clx-back-link {
       display: inline-flex;
       align-items: center;
       gap: var(--space-2);
-      font-size: var(--type-small);
-      color: var(--color-muted);
+      font-size: var(--size-sm);
+      color: var(--color-text-muted);
       text-decoration: none;
       margin-bottom: var(--space-6);
-      transition: color 0.3s ease;
+      transition: color 0.2s;
     }
     .clx-back-link:hover {
       color: var(--color-accent);
     }
+    .clx-arrow {
+      transition: transform 0.2s;
+    }
+    .clx-back-link:hover .clx-arrow {
+      transform: translateX(-3px);
+    }
   </style>
 </head>
-<body class="clx-body clx-body--team-profile">
-
-  <!-- ============ SCROLL PROGRESS ============ -->
-  <div id="clxScrollProgress" class="clx-scroll-progress" aria-hidden="true">
+<body>
+  <div class="clx-scroll-progress" aria-hidden="true">
     <span class="clx-scroll-progress-fill"></span>
   </div>
 
@@ -168,33 +166,32 @@
 
         <div class="clx-profile-hero">
           <div class="clx-profile-photo clx-reveal">
-            <img src="../images/cheifmentor.jpg" alt="Prof. Padma Sarangapani - Chief Mentor" width="600" height="800" loading="lazy">
+            <img src="../images/Mythili.png" alt="Prof. Mythili Ramchand - Chief, Equity &amp; Inclusion" width="600" height="800" loading="lazy">
           </div>
           <div class="clx-profile-info">
-            <p class="clx-profile-role clx-reveal">Chief Mentor</p>
-            <h1 class="clx-profile-name clx-reveal" data-delay="1">Prof. Padma Sarangapani</h1>
-            <p class="clx-profile-title clx-reveal" data-delay="2">Dean - Indira Mahindra School of Education, Mahindra University, Hyderabad</p>
-            <p class="clx-profile-prev-title clx-reveal" data-delay="2">Former Chairperson, Centre of Excellence in Teacher Education (CETE), School of Education (SoE), Tata Institute of Social Sciences (TISS), Mumbai</p>
+            <p class="clx-profile-role clx-reveal">Chief — Equity &amp; Inclusion</p>
+            <h1 class="clx-profile-name clx-reveal" data-delay="1">Prof. Mythili Ramchand</h1>
+            <p class="clx-profile-title clx-reveal" data-delay="2">Adjunct Professor, National Institute of Advanced Studies (NIAS), Bengaluru; Former Co-Chairperson, Centre of Excellence in Teacher Education (CETE), TISS Mumbai</p>
 
             <div class="clx-profile-bio clx-reveal" data-delay="3">
-              <p>A prominent academic leader and researcher, Prof. Sarangapani specialises in curriculum studies, teacher development, and school education. She has authored landmark sector reports and national studies, including UNESCO's State of Education Report for India (No Teacher, No Class) and the State of Teachers, Teaching and Teacher Education Report for India (SoTTTER) 2023, The Right Teacher for Every Child. She also led the award-winning Connected Learning Initiative (CLIx), which was recognised internationally for excellence in technology-enabled education.</p>
-              <p>Her foundational contributions to institutional design include serving on the group that designed the Bachelor of Elementary Education (BElEd) programme at the Central Institute of Education, Delhi, and on the Steering Group for the National Curriculum Framework (NCF) 2005.</p>
-              <p>Combining rigorous scholarship with active field engagement, she collaborates extensively with civil society and governments to advance foundational learning and strengthen public education systems. Her academic work and leadership remain firmly grounded in democratic values and social justice, championing inclusive, child-centred education for marginalised communities.</p>
-              <p>As Chief Mentor, Prof. Sarangapani offers visionary direction for systemic reform, driving capacity building and meaningful educational practice across India.</p>
+              <p>Prof. Mythili Ramchand is an Adjunct Professor at the National Institute of Advanced Studies (NIAS), Bengaluru. She previously served as Co-Chairperson of the Centre of Excellence in Teacher Education (CETE), School of Education, TISS Mumbai, where she also led the inclusive education research group.</p>
+              <p>Before joining TISS, Prof. Ramchand served as Director of the RV Educational Consortium, Bengaluru, from 2005 to 2018.</p>
+              <p>Prof. Ramchand has led numerous research studies, employing methodologies such as Participatory Action Research and case study approaches. Her contributions include collaborative projects, international research, and publications in books and journal articles.</p>
+              <p>Prof. Ramchand's expertise spans teacher professional development, participatory action research, and inclusive education approaches for disadvantaged learners. Her work challenges systems to move from 'accommodating differences' to centre the voices and agency of those historically excluded.</p>
             </div>
 
             <div class="clx-profile-highlights clx-reveal" data-delay="4">
               <div class="clx-profile-highlight">
-                <h3 class="clx-profile-highlight-title">Key Reports</h3>
-                <p class="clx-profile-highlight-text">UNESCO's State of Education Report for India (No Teacher, No Class), SoTTTER 2023 - The Right Teacher for Every Child</p>
+                <h3 class="clx-profile-highlight-title">Specialisations</h3>
+                <p class="clx-profile-highlight-text">Teacher professional development, participatory action research, inclusive education approaches for disadvantaged learners</p>
               </div>
               <div class="clx-profile-highlight">
-                <h3 class="clx-profile-highlight-title">Notable Work</h3>
-                <p class="clx-profile-highlight-text">Led the award-winning Connected Learning Initiative (CLIx), recognised internationally for excellence in technology-enabled education</p>
+                <h3 class="clx-profile-highlight-title">Key Focus</h3>
+                <p class="clx-profile-highlight-text">Moving systems from 'accommodating differences' to centreing the voices and agency of those historically excluded</p>
               </div>
               <div class="clx-profile-highlight">
-                <h3 class="clx-profile-highlight-title">Institutional Contributions</h3>
-                <p class="clx-profile-highlight-text">Designed the BElEd programme at Central Institute of Education, Delhi; Steering Group for National Curriculum Framework (NCF) 2005</p>
+                <h3 class="clx-profile-highlight-title">Experience</h3>
+                <p class="clx-profile-highlight-text">Former Co-Chairperson, CETE, TISS Mumbai; Former Director, RV Educational Consortium, Bengaluru</p>
               </div>
             </div>
           </div>
